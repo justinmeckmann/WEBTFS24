@@ -28,6 +28,7 @@ function contactFormValidation() {
 function orderFormValidation() {
     let isValid = true;
 
+    // get values for all images
     let printLofoten    = document.getElementById('printLofoten');
     let printMain       = document.getElementById('printMain');
     let printMilkyway   = document.getElementById('printMilkyway');
@@ -35,6 +36,7 @@ function orderFormValidation() {
 
     let orderSum = printLofoten.value+printMain.value+printMilkyway.value+printZurich.value;
 
+    // check if at least 1 images has been selected
     if (orderSum == 0) {
         printLofoten.style.borderColor = "red";
         printMain.style.borderColor = "red";
@@ -61,12 +63,14 @@ function orderFormValidation() {
         }
     }
 
+    // call function for all input fields
     isEmpty('firstNameOrder')
     isEmpty('lastNameOrder')
     isEmpty('adress')
     isEmpty('city')
     isEmpty('tel')
 
+    // check if email format is correct
     let email = document.getElementById('email');
     if (email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
         email.style.borderColor = ""; // remove red border 
