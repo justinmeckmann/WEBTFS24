@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" class="w3-black">
+<html lang="de" class="w3-black">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" >
     <title>Justin Meckmann Photography</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
-<body>
-    <header class="w3-bar center">
+<body class="w3-container">
+    <header class="pageHeader w3-bar center">
         <div class="w3-bar-item">
             <nav class="w3-bar">
                 <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#top">Home</a>
                 <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#about">Über mich</a>
                 <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#book">Buchen</a>
+                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#prints">Gallery Prints</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <img class="w3-image" src="./img/240120_Konzert_i45.png">  <!-- front page image -->
-        
-        <section class="w3-container w3-padding-16">  <!-- about me container-->
+        <div class="backgroundImage">
+            <img class="w3-image" src="./img/240120_Konzert_i45.png">  <!-- front page image -->
+        </div>
+
+        <section class="w3-container">  <!-- about me container-->
             <a id="about">
                 <h2>Über mich</h2>
-                <img class="w3-col m4 l2" src="./img/portraet.png">
-                <p class="w3-padding-small w3-col m8 l10">
+                <div class="w3-container w3-col m4 l2">
+                    <img class="w3-image" src="./img/portraet.png">
+                </div>
+                <p class="w3-col m8 l10">
                     Hallo! Ich bin ein Event- und Konzertfotograf mit über fünf Jahren beruflicher Erfahrung. Meine Kamera ist mein 
                     erzählerisches Werkzeug, mit dem ich lebendige Momente der Begeisterung, emotionale Ausbrüche und interaktive 
                     Szenen einfangen kann, die das lebendige Herz jedes Ereignisses ausmachen. Ob ich durch das pulsierende Chaos 
@@ -38,30 +43,153 @@
                 </p>
             </a>
         </section>
+        <br>
+        <hr>
 
         <section class="w3-container">  <!-- Contact form container-->
             <a id="book">
-                <h2>Buchen</h2>
-                <p>Benötigen Sie einen Fotografen für Ihren bevorstehenden Event? Schicken Sie mir eine Anfrage,
-                    indem Sie das untenstehende Formular ausfüllen. Ich werde Ihnen innerhalb von 2 Arbeitstagen antworten.
-                </p>
-                <form class="contactForm" action="contact.php">
-                    <div class="w3-col m6">
-                        <label class="w3-col m2" for="firstName">Vorname:</label>
-                        <input class="w3-col m3" type="text" id="firstName" name="firstName" placeholder="Max">
-                        <div class="w3-col m1 w3-container"></div>
-                        <label class="w3-col m2" for="lastName">Nachname:</label>
-                        <input class="w3-col m3" type="text" id="lastName" name="lastName" placeholder="Mustermann">
+                <form action="contact.php" method="POST" onsubmit="return contactFormValidation()">
+                    <h2>Buchen</h2>
+                    <p>Benötigen Sie einen Fotografen für Ihren bevorstehenden Event? Schicken Sie mir eine Anfrage,
+                        indem Sie das untenstehende Formular ausfüllen. Ich werde Ihnen innerhalb von 2 Arbeitstagen antworten.
+                    </p>
+                    <br>
+                    <div class="w3-col m8">
+                        <label class="w3-col m2"    for="firstName">Vorname:</label>
+                        <input class="w3-col m3"    type="text"     id="firstName"  name="firstName"    placeholder="Max">
+                        <div class="w3-col m2 w3-container"></div>
+                        <label class="w3-col m2"    for="lastName">Nachname:</label>
+                        <input class="w3-col m3"    type="text"     id="lastName"   name="lastName"     placeholder="Mustermann">
+                        <br><br>
+
+                        <label class="w3-col m2"    for="date">Datum:</label>
+                        <input class="w3-col m3"    type="date"     id="date"       name="date">
+
+                        <div class="w3-col m2 w3-container"></div>
+
+                        <label class="w3-col m2"    for="time">Zeit:</label>
+                        <input class="w3-col m3"    type="time"     id="time"       name="time"         placeholder="Mustermann">
+                        <br><br>
+
+                        <label class="w3-col m2"    for="message">Ihre Nachricht:</label>
+                        <textarea class="w3-col m10" type="text"     id="message"    name="message"     placeholder="Ihre Nachricht"    cols="40"   rows="5"></textarea>
+                        <br><br>
+
+                        <button>Absenden</button>
                     </div>
 
-                    <input type="submit" value="Submit">
+                    <div class="w3-col m4 w3-container">
+                        <h3>Preise:</h3>
+                        <table>
+                            <tr>
+                                <td>1. Stunde</td>
+                                <td>CHF 149.00</td>
+                            </tr>
+                            <tr>
+                                <td>+ jede weitere Stunde</td>
+                                <td>CHF 99.00</td>
+                            </tr>
+                            <tr>
+                                <td>Anfahrtskosten</td>
+                                <td>CHF 0.60 / km</td>
+                            </tr>
+                        </table>
+                    </div>
                 </form>
             </a>
         </section>
-    </main>
+        <br>
+        <hr>
 
+        <section class="w3-container"> <!-- buy prints container-->
+            <a id="prints">
+                <h2>Gallery Prints</h2>
+                <div class="gallryImages">
+                    <p>Auf meinen Reisen mache ich gerne auch hin und wieder Landschaftbilder. Einige auserwählte Bilder können exklusive
+                        als hochwertige Acrylglas Gallery Prints bestellt werden.
+                    </p>
+                    <img class="w3-image" src="./img/bild-wand.png">
+
+                    <p>Wählen Sie die gewünschte Anzahl Bilder aus und geben Sie Ihre Lieferadresse im unten stehenden Formular ein.<br>
+                        Die Prints haben ein Format von 120 x 80cm und kosten CHF 999.00 (inkl. Versand CH/FL und 8.1% mwst). <br>
+                        Zur Zeit Liefern wir nur in die Schweiz und in das Fürstentum Liechtenstein.
+                    </p>
+
+                    <form action="order.php" method="POST" onsubmit="return orderFormValidation()">
+                        <div class="w3-container">
+                            <div class="w3-col m6 galleryImage">
+                                <img class="w3-image" src="./img/lofoten.png">
+                                <label class="w3-col m4"    for="printLofoten">Lofoten, NO</label>
+                                <label class="w3-col m4"    for="printLofoten">Gewünscht Anzahl: </label>
+                                <input class="w3-col m4"    type="number" id="printLofoten" name="printLofoten" value="0" min="0">                    
+                            </div>
+
+                            <div class="w3-col m6 galleryImage">
+                                <img class="w3-image" src="./img/main.png">
+                                <label class="w3-col m4"    for="printMain">Main, USA</label>
+                                <label class="w3-col m4"    for="printMain">Gewünscht Anzahl: </label>
+                                <input class="w3-col m4"    type="number" id="printMain" name="printMain" value="0" min="0">                    
+                            </div>
+                            
+                            <br>
+
+                            <div class="w3-col m6 galleryImage">
+                                <img class="w3-image" src="./img/milkyway.png">
+                                <label class="w3-col m4"    for="printMilkyway">Milkyway, USA</label>
+                                <label class="w3-col m4"    for="printMilkyway">Gewünscht Anzahl:</label>
+                                <input class="w3-col m4"    type="number" id="printMilkyway" name="printMilkyway" value="0" min="0">                    
+                            </div>
+                            
+                            <div class="w3-col m6 galleryImage">
+                                <img class="w3-image" src="./img/zurich.png">
+                                <label class="w3-col m4"    for="printZurich">Zürich, CH</label>
+                                <label class="w3-col m4"    for="printZurich">Gewünscht Anzahl:</label>
+                                <input class="w3-col m4"    type="number" id="printZurich" name="printZurich" value="0" min="0">
+                            </div>
+                        </div>
+
+                        <div class="orderForm" action="order.php">
+                            <h3>Lieferadresse</h3>
+                            <div class="w3-col m8">
+                                <label class="w3-col m2"    for="firstNameOrder">Vorname:</label>
+                                <input class="w3-col m3"    type="text" id="firstNameOrder" name="firstNameOrder" placeholder="Max">
+                                <div class="w3-col m1 w3-container"></div>
+                                <label class="w3-col m2"    for="lastNameOrder">Nachname:</label>
+                                <input class="w3-col m3"    type="text" id="lastNameOrder" name="lastNameOrder" placeholder="Mustermann">
+                                <br><br>
+
+                                <label class="w3-col m2"    for="adress">Strasse + Nr.:</label>
+                                <input class="w3-col m3"    type="text" id="adress" name="adress" placeholder="Musterweg 2">
+                                <div class="w3-col m1 w3-container"></div>
+                                <label class="w3-col m2"    for="city">Ort + PLZ:</label>
+                                <input class="w3-col m3"    type="text" id="city" name="city" placeholder="9999 Musterdorf">
+                                <br><br>
+                                
+                                <label class="w3-col m2"    for="tel">Tel. Nummer:</label>
+                                <input class="w3-col m3"    type="text" id="tel" name="tel" placeholder="+41 012 345 67 89 ">
+                                <div class="w3-col m1 w3-container"></div>
+                                <label class="w3-col m2"    for="email">Email:</label>
+                                <input class="w3-col m3"    type="email" id="email" name="email" placeholder="maxmustermann@gmail.com">
+                                <br><br>
+
+                                <label class="w3-col m2"    for="payment">Zahlungsmethode:</label>
+                                <select class="w3-col m2"   name="payment" id="payment">
+                                    <option value="0">Rechung (30 Tage)</option>
+                                    <option value="1">Twint</option>                            
+                                </select>
+                                <br><br>
+
+                                <button>Bestellen</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </a>
+        </section>
+    </main>
     <footer>
         <p>©2024 Justin Meckmann</p>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 </html>

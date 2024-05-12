@@ -1,53 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" class="w3-black">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" >
-    <title>Justin Meckmann</title>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Justin Meckmann Photography</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 <body>
-    <header class="header" id="page-header">
-        <div class="social-media">
-            <a target="_blank" href="https://www.facebook.com/JustinMeckmann"><img class="social-img" src="./img/facebook_white.png"></a>
-            <a target="_blank" href="https://www.instagram.com/justinmeckmann"><img class="social-img" src="./img/instagram_white.png"></a>
-            <a target="_blank" href="https://flickr.com/people/justinmeckmann/"><img class="social-img" src="./img/flickr_white.png"></a>
+    <header class="pageHeader w3-bar center">
+        <div class="w3-bar-item">
+            <nav class="w3-bar">
+                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#top">Home</a>
+                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#about">Über mich</a>
+                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#book">Buchen</a>
+                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#prints">Prints</a>
+            </nav>
         </div>
-        <h1 class="title"><a class="title" href="">Justin Meckmann Photography</a></h1>
-        <nav>
-            <ul class="site-menu">
-                <li><a target="_self" href="#book">Book</a></li>
-                <li><a target="_self" href="#about">About</a></li>
-                <li><a target="_self" href="">Home</a></li>
-            </ul>
-        </nav>
     </header>
-    <div class="content">
-        <main>
-            <img class="image-fullscreen" src="./img/240120_Konzert_i45.png">
 
-            <div class="about">
-                <a id="about">
-                    <h2>About</h2>
-                    <p>In this section you will learn something about me!</p>
-                </a>
-            </div>
+    <main>
+        <div class="backgroundImage">
+            <img class="w3-image" src="./img/240120_Konzert_i45.png">  <!-- front page image -->
+        </div>
 
-            <div class="book">
-                <a id="book">
-                    <h2>Book</h2>
-                    <p>Do you need a photographer for your upcomming Event? Send me a request by filling out the form below. I will get back to you within 2 working days.</p>
-                </a>
-            </div>
+        <section class="w3-container w3-padding-16">  <!-- about me container-->
+            <a id="about">
+                <h2>Über mich</h2>
+                <img class="w3-col m4 l2" src="./img/portraet.png">
+                <p class="w3-padding-small w3-col m8 l10">
+                    Hallo! Ich bin ein Event- und Konzertfotograf mit über fünf Jahren beruflicher Erfahrung. Meine Kamera ist mein 
+                    erzählerisches Werkzeug, mit dem ich lebendige Momente der Begeisterung, emotionale Ausbrüche und interaktive 
+                    Szenen einfangen kann, die das lebendige Herz jedes Ereignisses ausmachen. Ob ich durch das pulsierende Chaos 
+                    eines Live-Konzerts navigiere oder die souveräne Professionalität eines Business-Meetings dokumentiere, mein 
+                    Hauptziel ist es, eindrucksvolle Bilder zu erschaffen, die nicht nur in den Augenblicken Anklang finden, sondern 
+                    auch als wertvolle Erinnerungen dienen. Wünschen Sie sich unvergessliche visuelle Dokumentationen Ihres nächsten 
+                    Events? Lassen Sie uns gemeinsam etwas Besonderes schaffen!
+                </p>
+            </a>
+        </section>
+        <br>
+        <hr>
 
-        </main>
+        <section class="w3-container">  <!-- Contact form container-->
+            <a id="book">
+                <form class="contactForm" action="contact.php">
+                    <div class="w3-col m8">
+                        <h2>Buchen</h2>
+                        <p>Benötigen Sie einen Fotografen für Ihren bevorstehenden Event? Schicken Sie mir eine Anfrage,
+                            indem Sie das untenstehende Formular ausfüllen. Ich werde Ihnen innerhalb von 2 Arbeitstagen antworten.
+                        </p>
+                        <br>
+                        <label class="w3-col m2"    for="firstName">Vorname:</label>
+                        <input class="w3-col m3"    type="text"     id="firstName"  name="firstName"    placeholder="Max">
+                        <div class="w3-col m2 w3-container"></div>
+                        <label class="w3-col m2"    for="lastName">Nachname:</label>
+                        <input class="w3-col m3"    type="text"     id="lastName"   name="lastName"     placeholder="Mustermann">
+                        <br><br>
 
-        <footer>
-            <p>©2024 Justin Meckmann</p>
-        </footer>
-    </div>
+                        <label class="w3-col m2"    for="date">Datum:</label>
+                        <input class="w3-col m3"    type="date"     id="date"       name="date">
+                        <div class="w3-col m2 w3-container"></div>
+                        <label class="w3-col m2"    for="time">Zeit:</label>
+                        <input class="w3-col m3"    type="time"     id="time"       name="time"         placeholder="Mustermann">
+                        <br><br>
+
+                        <label class="w3-col m2"    for="message">Ihre Nachricht:</label>
+                        <textarea class="w3-col m10" type="text"     id="message"    name="message"     placeholder="Ihre Nachricht"    cols="40"   rows="5"></textarea>
+                        <br><br>
+
+                        <input class=""             type="submit"   value="Absenden">
+                    </div>
+
+                    <div class="w3-col m4 w3-container">
+                        <h3>Preise</h3>
+                        <p class="w3-col m7">1. Stunde:</p>
+                        <p class="w3-col m5">CHF 99.00</p>
+                        <p class="w3-col m7">+jede weitere Stunde:</p>
+                        <p class="w3-col m5">CHF 59.00</p>
+                        <p class="w3-col m7">Anfahrt:</p>
+                        <p class="w3-col m5">CHF 0.50 / km</p>
+                    </div>
+                </form>
+            </a>
+        </section>
+        <br>
+        <hr>
+
+        <section class="w3-container"> <!-- buy prints container-->
+            <a id="prints">
+                <h2>Prints kaufen</h2>
+                <p>Auf meinen Reisen mache ich gerne auch hin und wieder Landschaftbilder. Einige auserwählte Bilder können exklusive
+                    als hovchwertige Acrylglas Gallery Prints bestellt werden.
+                </p>
+                <div>
+                    <div class="w3-container w3-col m6">
+                        <img class="w3-image" src="./img/lofoten.png">
+                    </div>
+
+                    <div class="w3-container w3-col m6">
+                        <img class="w3-image" src="./img/main.png">
+                    </div>
+                    
+                    <br>
+
+                    <div class="w3-container w3-col m6">
+                        <img class="w3-image" src="./img/milkyway.png">
+                    </div>
+                    <div class="w3-container w3-col m6">
+                        <img class="w3-image" src="./img/zurich.png">
+                    </div>
+
+
+                </div>
+
+            </a>
+        </section>
+        <br>
+        <hr>
+
+    </main>
+
+    <footer >
+        <p>©2024 Justin Meckmann</p>
+    </footer>
 </body>
 </html>

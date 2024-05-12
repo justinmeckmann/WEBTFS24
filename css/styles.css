@@ -1,11 +1,11 @@
 /* styles.css */
 
-header {
+.pageHeader {
     position: sticky;
     top: 0;
-    color: white;
-    background-color: black;
+    background: rgba(0, 0, 0, 0.8)
 }
+
 
 .center {
     display: flex;
@@ -13,17 +13,25 @@ header {
     align-items: center;
 }
 
-.contactForm{
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td {
+    border: 1px solid white;
+    text-align: left;
+    padding: 8px;
+}
+  
+.galleryContainer {
+    display: flex;
+    align-items: center;
 }
 
-label {
-    grid-column: 2/3;
+.galleryImage {
+    padding: 10px 10px;
 }
-input {
-    grid-column: 3/4;
-}
-
-
 
 footer {
     text-align: center;
