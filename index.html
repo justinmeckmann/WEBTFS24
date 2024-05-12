@@ -2,7 +2,7 @@
 <html lang="en" class="w3-black">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" >
-    <title>Justin Meckmann</title>
+    <title>Justin Meckmann Photography</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.css">
@@ -14,8 +14,8 @@
         <div class="w3-bar-item">
             <nav class="w3-bar">
                 <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#top">Home</a>
-                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#about">About</a>
-                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#book">Book</a>
+                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#about">Über mich</a>
+                <a class="w3-bar-item w3-button w3-mobile w3-hover-grey" href="#book">Buchen</a>
             </nav>
         </div>
     </header>
@@ -25,36 +25,37 @@
         
         <section class="w3-container w3-padding-16">  <!-- about me container-->
             <a id="about">
-                <h2>About Me</h2>
+                <h2>Über mich</h2>
                 <img class="w3-col m4 l2" src="./img/portraet.png">
                 <p class="w3-padding-small w3-col m8 l10">
-                    Hello! I'm a passionate event photographer with over five years of
-                    experience capturing the dynamic energy of concerts and the professional atmosphere of 
-                    corporate events. My camera is my tool for storytelling, allowing me to freeze moments 
-                    of excitement, emotion, and interaction that are the heartbeat of any event. Whether 
-                    I'm navigating the vibrant chaos of a live concert or the structured elegance of a 
-                    business gathering, my goal is to produce images that not only resonate with attendees 
-                    but also serve as lasting memories. Looking to immortalize your next event with striking 
-                    visuals? Let's connect!
+                    Hallo! Ich bin ein Event- und Konzertfotograf mit über fünf Jahren beruflicher Erfahrung. Meine Kamera ist mein 
+                    erzählerisches Werkzeug, mit dem ich lebendige Momente der Begeisterung, emotionale Ausbrüche und interaktive 
+                    Szenen einfangen kann, die das lebendige Herz jedes Ereignisses ausmachen. Ob ich durch das pulsierende Chaos 
+                    eines Live-Konzerts navigiere oder die souveräne Professionalität eines Business-Meetings dokumentiere, mein 
+                    Hauptziel ist es, eindrucksvolle Bilder zu erschaffen, die nicht nur in den Augenblicken Anklang finden, sondern 
+                    auch als wertvolle Erinnerungen dienen. Wünschen Sie sich unvergessliche visuelle Dokumentationen Ihres nächsten 
+                    Events? Lassen Sie uns gemeinsam etwas Besonderes schaffen!
                 </p>
             </a>
         </section>
 
         <section class="w3-container">  <!-- Contact form container-->
             <a id="book">
-                <h2>Book</h2>
-                <p>
-                    Do you need a photographer for your upcomming Event? Send me a request by filling out the form below. 
-                    I will get back to you within 2 working days.
+                <h2>Buchen</h2>
+                <p>Benötigen Sie einen Fotografen für Ihren bevorstehendes Event? Schicken Sie mir eine Anfrage,
+                    indem Sie das untenstehende Formular ausfüllen. Ich werde Ihnen innerhalb von 2 Arbeitstagen antworten.
                 </p>
-                <div class="contactDetails">
-                    <label>Date of Event:</label>
-                    <input type="date">
-                    <label>Time of Event:</label>
-                    <input type="time">
-                    <input type="duration">
+                <form class="contactForm" action="contact.php">
+                    <div class="w3-col m6">
+                        <label class="w3-col m2" for="firstName">Vorname:</label>
+                        <input class="w3-col m3" type="text" id="firstName" name="firstName" placeholder="Max">
+                        <div class="w3-col m1 w3-container"></div>
+                        <label class="w3-col m2" for="lastName">Nachname:</label>
+                        <input class="w3-col m3" type="text" id="lastName" name="lastName" placeholder="Mustermann">
+                    </div>
 
-                </div>
+                    <input type="submit" value="Submit">
+                  </form>
             </a>
         </section>
     </main>

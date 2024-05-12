@@ -13,12 +13,7 @@ header {
     align-items: center;
 }
 
-.contactDetails{
-    width:     310px;
-    height:    240px;
-    display: grid;
-    grid-template-columns: 10px 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+.contactForm{
 }
 
 label {
